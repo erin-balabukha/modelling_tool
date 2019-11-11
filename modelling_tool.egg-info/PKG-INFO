@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: modelling-tool
-Version: 0.0.6
+Version: 0.0.7
 Summary: A tool for modelling covering data exploration, preprocessing, and model diagnostics
 Home-page: https://github.com/pypa/sampleproject_erinb
 Author: Erin Balabukha

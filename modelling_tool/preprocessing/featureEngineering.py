@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-"""
-
-To instantiate the class, pass your dataframe as an argument.
-features = featureEngineering(df)
-
-"""
 
 import numpy as np
 
 class featureEngineering:
 
     '''
-    Methods to clean the data and prepare for modelling
+    Methods to clean the data and prepare for modelling.
+
+    To instantiate the class, pass your dataframe as an argument.
+    features = featureEngineering(df)
     '''
 
     def __init__(self, df):
+
         self.df = df
 
 

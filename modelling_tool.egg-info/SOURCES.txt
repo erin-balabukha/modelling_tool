@@ -5,7 +5,6 @@ modelling_tool/main.py
 modelling_tool.egg-info/PKG-INFO
 modelling_tool.egg-info/SOURCES.txt
 modelling_tool.egg-info/dependency_links.txt
-modelling_tool.egg-info/requires.txt
 modelling_tool.egg-info/top_level.txt
 modelling_tool/data/__init__.py
 modelling_tool/data/generate.py

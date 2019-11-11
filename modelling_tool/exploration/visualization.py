@@ -1,13 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-
-To instantiate the visualization class, pass your dataframe and the name of your
-target variable.
-
-Example:
-my_vis = visualization(train, 'actual_cat')
-
-"""
 
 import pandas as pd
 import numpy as np
@@ -47,7 +38,11 @@ class styling(object):
 class visualization(styling):
 
     '''
-    Methods to to visualize the data
+    To instantiate the visualization class, pass your dataframe and the name of your
+    target variable.
+
+    Example:
+    my_vis = visualization(train, 'actual_cat')
     '''
 
 

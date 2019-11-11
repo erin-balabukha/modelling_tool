@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 31 13:55:56 2019
 
-@author: Erin Balabukha
-"""
 
 import pandas as pd
 import numpy as np
@@ -11,7 +7,14 @@ from sklearn import model_selection
 
 
 def generate(nb_obs):
+    '''
+    Use generate() function to create a sample dataset.
+    Pass number of observations you want to generate as an argument.
 
+    Example:
+    df = generate(1000)
+    '''
+    
     # Sample dataset with two actual and predicted variables
     n = nb_obs
 

@@ -1,23 +1,28 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 31 13:36:00 2019
-
-@author: Erin Balabukha
-"""
-
 import pandas as pd
 import numpy as np
 
 class modelDiagnostics:
-
     '''
-    Methods to explore the model output (actual vs. predicted)
+    Methods to explore the model output (actual vs. predicted).
+
+    To instantiate the class, pass actual and predicted values of the train set
+    as the arguments.
+    You can also simultaneously pass the values for validation and test sets in
+    addition to train to explore model performance across all datasets.
+
+    If target variable is categorical, predicted value should be a probability
+    score from 0 to 1.
+
+    Example:
+    my_res = modelDiagnostics(train['actual_cat'], train['predicted_cat'],
+                              test['actual_cat'], test['predicted_cat'],
+                              valid['actual_cat'], valid['predicted_cat'])
     '''
 
     def __init__(self, actual_train,        predicted_score_train,
                         actual_test = None,  predicted_score_test = None,
                         actual_val = None,   predicted_score_val = None):
-
         self.actual_train = actual_train
         self.predicted_score_train = predicted_score_train
 
@@ -33,7 +38,8 @@ class modelDiagnostics:
         '''
         Target variable: dichotomous in numeric format (1 for 'yes' and 0 for 'no')
 
-      - sorts actual and predicted score values on predicted score variable from highest to lowest probability.
+      - sorts actual and predicted score values on predicted score variable from
+        highest to lowest probability.
       - groups the actual and predicted values in n buckets with equal sizes
       - provides summary statistics on ratio of actual to predicted, false positives, lift, etc.
         '''

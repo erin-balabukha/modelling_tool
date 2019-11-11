@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-'''
+import pandas as pd
+import numpy as np
+
+class modelDiagnostics:
+    '''
     Methods to explore the model output (actual vs. predicted).
 
     To instantiate the class, pass actual and predicted values of the train set
@@ -14,21 +18,11 @@
     my_res = modelDiagnostics(train['actual_cat'], train['predicted_cat'],
                               test['actual_cat'], test['predicted_cat'],
                               valid['actual_cat'], valid['predicted_cat'])
-
-'''
-
-import pandas as pd
-import numpy as np
-
-class modelDiagnostics:
+    '''
 
     def __init__(self, actual_train,        predicted_score_train,
                         actual_test = None,  predicted_score_test = None,
                         actual_val = None,   predicted_score_val = None):
-        '''
-        Input example: train['actual'], train['predicted']
-        '''
-
         self.actual_train = actual_train
         self.predicted_score_train = predicted_score_train
 

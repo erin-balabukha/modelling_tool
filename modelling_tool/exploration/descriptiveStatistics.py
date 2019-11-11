@@ -1,12 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-
-To instantiate the class, pass your dataframe as an argument.
-
-Example:
-desc_analysis = descriptiveStatistics(df)
-
-"""
 
 import pandas as pd
 
@@ -14,6 +6,12 @@ class descriptiveStatistics:
 
     '''
     Methods to explore data and look as summary statistics
+
+    To instantiate the class, pass your dataframe as an argument.
+
+    Example:
+    desc_analysis = descriptiveStatistics(df)
+
     '''
 
     def __init__(self, df):

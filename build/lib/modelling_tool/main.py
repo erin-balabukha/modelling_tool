@@ -1,30 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
 
-import sys
-import os
-import pandas as pd
-import numpy as np
-from sklearn import model_selection
-import matplotlib.pyplot as plt
-from matplotlib.ticker import PercentFormatter
+This script serves to test the package and demostrate its functionality.
+
+"""
+
+from modelling_tool.data.generate import generate
+from modelling_tool.preprocessing.featureEngineering import featureEngineering as fe
+
+from modelling_tool.exploration.descriptiveStatistics import descriptiveStatistics as ds
+from modelling_tool.exploration.visualization import visualization as vis
+
+from modelling_tool.model_diagnostics.modelDiagnostics import modelDiagnostics as md
 
 
+#PACKAGE INFORMATION___________________________________________________________
 
-# In order to include functions from other files, need to tell jupyter notebook where the path is
-my_path = os.path.abspath(os.path.join('..'))
-my_path = 'W:\Developpement\_PROJECTS\_STATISTICAL_DEVELOPMENT\SMART\z. Perso\Erin\My functions'
-if my_path not in sys.path:
-    sys.path.append(my_path)
+#To see the documentation about classes
+#and how to instantiate them, use print(class.__doc__)
+print(generate.__doc__)
+print(fe.__doc__)
+print(ds.__doc__)
+print(vis.__doc__)
+print(md.__doc__)
 
-from data.generate import generate
-from exploration.descriptiveStatistics import descriptiveStatistics as ds
-#from exploration.visualization import visualization as vis
-from exploration.visualization import visualization as vis
-from preprocessing.featureEngineering import featureEngineering as fe
-from model_diagnostics.modelDiagnostics import modelDiagnostics
+#To see the methods included in a class, use help(class)
+help(md.modelDiagnostics)
+
 
 #DATA___________________________________________________________________________
-
 train, valid, test = generate(200)
+
 
 #PREPROCESSING__________________________________________________________________
 feature_engineering = fe(train)
@@ -35,17 +41,21 @@ train['var3_new'] = feature_engineering.reduce_categories('var3')
 train['var3_new'].value_counts()
 
 
-
-#VALIDATION_____________________________________________________________________
+#MODEL DIAGNOSTICS______________________________________________________________
 #Classification model diagnostics class:
-my_res = modelDiagnostics(train['actual_cat'], train['predicted_cat'],
-                          test['actual_cat'], test['predicted_cat'],
-                          valid['actual_cat'], valid['predicted_cat'])
+my_res = md(train['actual_cat'], train['predicted_cat'],
+            test['actual_cat'], test['predicted_cat'],
+            valid['actual_cat'], valid['predicted_cat'])
 print(my_res)
 print(my_res.binary_bucket_summary('train', 5))
 
 #Testing errors:
 print(my_res.binary_bucket_summary('wrong dataset', 5))
+
+train_summary = my_res.binary_bucket_summary('train')
+valid_summary = my_res.binary_bucket_summary('valid')
+test_summary = my_res.binary_bucket_summary('test')
+
 
 
 #EXPLORATION____________________________________________________________________
@@ -75,6 +85,7 @@ my_vis.act_vs_pred('var1', n_bins = 3)
 #Testing for categorical variable:
 my_vis.act_vs_pred('var3', title = 'My title',
                    x_label = 'Predictor', y_label ='Target')
+
 
 #Visualization of model performance by buckets: lift (default)
 my_vis.buckets_vis(train_summary = train_summary,
