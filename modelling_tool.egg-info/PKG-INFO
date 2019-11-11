@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: modelling-tool
+Version: 0.0.6
+Summary: A tool for modelling covering data exploration, preprocessing, and model diagnostics
+Home-page: https://github.com/pypa/sampleproject_erinb
+Author: Erin Balabukha
+Author-email: erin.balabukha@gmail.com
+License: UNKNOWN
+Description: ### Created on Mon Oct 20 14:48:05 2019
+        ##### author: Erin Balabukha
+        
+        Program goal:
+        
+        - Create a collection of classes and methods that are helpful in the modelling process.
+        - The collection will cover several steps of the analysis, including
+          data cleaning, data preprocessing and summary, visualization, and model diagnostics.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
