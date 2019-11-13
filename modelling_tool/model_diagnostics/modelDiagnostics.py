@@ -42,6 +42,9 @@ class modelDiagnostics:
         highest to lowest probability.
       - groups the actual and predicted values in n buckets with equal sizes
       - provides summary statistics on ratio of actual to predicted, false positives, lift, etc.
+
+        Input: the name of a dataset (string format).
+        Output: summary table
         '''
 
         if set_type == 'train':

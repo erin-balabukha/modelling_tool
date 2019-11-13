@@ -25,7 +25,7 @@ print(vis.__doc__)
 print(md.__doc__)
 
 #To see the methods included in a class, use help(class)
-help(md.modelDiagnostics)
+help(md)
 
 
 #DATA___________________________________________________________________________
@@ -88,9 +88,9 @@ my_vis.act_vs_pred('var3', title = 'My title',
 
 
 #Visualization of model performance by buckets: lift (default)
-my_vis.buckets_vis(train_summary = train_summary,
-                   valid_summary = valid_summary,
-                   test_summary = test_summary)
+my_vis.buckets_vis(train_summary_example = train_summary,
+                   valid_summary_example = valid_summary,
+                   test_summary_example = test_summary)
 
 #Visualization of model performance by buckets: false positives
 my_vis.buckets_vis(train_summary = train_summary,

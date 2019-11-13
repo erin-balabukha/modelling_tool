@@ -5,7 +5,7 @@ import pandas as pd
 class descriptiveStatistics:
 
     '''
-    Methods to explore data and look as summary statistics
+    Methods to explore data and look at summary statistics.
 
     To instantiate the class, pass your dataframe as an argument.
 

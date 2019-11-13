@@ -38,8 +38,8 @@ class styling(object):
 class visualization(styling):
 
     '''
-    To instantiate the visualization class, pass your dataframe and the name of your
-    target variable.
+    To instantiate the visualization class, pass your dataframe and
+    the name of your target variable.
 
     Example:
     my_vis = visualization(train, 'actual_cat')
