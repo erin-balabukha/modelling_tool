@@ -5,7 +5,7 @@ This script serves to test the package and demostrate its functionality.
 
 """
 
-from modelling_tool.data.generate import generate
+from modelling_tool.data.generate import generate, buckets_data
 from modelling_tool.preprocessing.featureEngineering import featureEngineering as fe
 
 from modelling_tool.exploration.descriptiveStatistics import descriptiveStatistics as ds
@@ -30,6 +30,7 @@ help(md)
 
 #DATA___________________________________________________________________________
 train, valid, test = generate(200)
+train_summary_example, valid_summary_example, test_summary_example = buckets_data()
 
 
 #PREPROCESSING__________________________________________________________________
@@ -88,9 +89,9 @@ my_vis.act_vs_pred('var3', title = 'My title',
 
 
 #Visualization of model performance by buckets: lift (default)
-my_vis.buckets_vis(train_summary_example = train_summary,
-                   valid_summary_example = valid_summary,
-                   test_summary_example = test_summary)
+my_vis.buckets_vis(train_summary = train_summary_example,
+                   valid_summary = valid_summary_example,
+                   test_summary = test_summary_example)
 
 #Visualization of model performance by buckets: false positives
 my_vis.buckets_vis(train_summary = train_summary,

@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="modelling-tool", # Replace with your own username
-    version="0.0.14",
+    version="0.0.16",
     author="Erin Balabukha",
     author_email="erin.balabukha@gmail.com",
     description="A tool for modelling covering data exploration, preprocessing, and model diagnostics",
