@@ -37,7 +37,7 @@ train_summary_example, valid_summary_example, test_summary_example = buckets_dat
 feature_engineering = fe(train)
 print(feature_engineering)
 print(train['var3'].value_counts())
-train['var3_new'] = feature_engineering.reduce_categories('var3', percent = 0.1)
+train['var3_new'] = feature_engineering.reduce_categories('var3', threshold = 0.1)
 train['var3_new'] = feature_engineering.reduce_categories('var3')
 train['var3_new'].value_counts()
 
@@ -94,7 +94,7 @@ my_vis.buckets_vis(train_summary = train_summary_example,
                    test_summary = test_summary_example)
 
 #Visualization of model performance by buckets: false positives
-my_vis.buckets_vis(train_summary = train_summary,
-                   valid_summary = valid_summary,
-                   test_summary = test_summary,
+my_vis.buckets_vis(train_summary = train_summary_example,
+                   valid_summary = valid_summary_example,
+                   test_summary = test_summary_example,
                    performance_indicator = 'false_positive')

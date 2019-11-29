@@ -5,16 +5,16 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="modelling-tool", # Replace with your own username
-    version="0.0.16",
+    version="0.0.17",
     author="Erin Balabukha",
-    author_email="erin.balabukha@gmail.com",
+    author_email="erin.balabukha@tdinsurance.com",
     description="A tool for modelling covering data exploration, preprocessing, and model diagnostics",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/pypa/sampleproject_erinb",
+    url="https://github.com/erin-balabukha/modelling_tool",
     packages=setuptools.find_packages(),
 #    install_requires=['pandas>=0.23', 'numpy>=1.15', 'matplotlib>=2.2.3', 'scikit-learn>=0.20.4'],
-#    install_requires=['pandas', 'numpy', 'matplotlib', 'scikit-learn'],
+    install_requires=['pandas', 'numpy', 'matplotlib', 'scikit-learn'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
