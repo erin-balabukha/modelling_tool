@@ -4,12 +4,12 @@ The tool is designed to provide helper functions for a modelling project and cov
 - data preprocessing and feature engineering
 - data exploration and descriptive analysis
 - model diagnostics
-- data visualization.
+- data visualization
 
 
 ## Details about the package structure and classes
 
-To see the documentation about classes and how to instantiate them, import the modules run the following code:
+To see the documentation about classes and how to instantiate them, import the modules and run the following code:
 
 ```
 help(md)
@@ -70,11 +70,11 @@ my_vis.buckets_vis(train_summary = train_summary_example,
 If you want to see more examples, open and run the examples.py (located in modelling-tool folder).
 
 ## Package installation
-Download .whl file and run pip install 'C:/...your_path.../modelling_tool-0.0.16-py3-none-any.whl'
+Download .whl file from dist folder and run pip install 'C:/...your_path.../modelling_tool-0.0.16-py3-none-any.whl'
 
 ## Status
 Package development is in progress.
-The key classes have been built and more functionality will be added over time.
+The key blocks have been built and more functionality will be added over time.
 
 ## Contact
 Created by Erin Balabukha
