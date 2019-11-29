@@ -75,7 +75,7 @@ Description: # Modelling tool
         ```
         
         ## More details on package functionality
-        If you want to see more examples, open and run the examples.py (located in the root directory of a package).
+        If you want to see more examples, open and run the examples.py (located in modelling-tool folder).
         
         ## Package installation
         Download .whl file and run pip install 'C:/...your_path.../modelling_tool-0.0.16-py3-none-any.whl'
