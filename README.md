@@ -74,7 +74,7 @@ my_vis.buckets_vis(train_summary = train_summary_example,
                    test_summary = test_summary_example)
 
 ```
-Visualization example (buckets_vis output which shows the model performance by bucket):
+Visualization example (buckets_vis output):
 <img src="/modelling_tool/data/vis_example2.png" />
 
 ## More details on package functionality

@@ -12,14 +12,23 @@ Description: # Modelling tool
         - data preprocessing and feature engineering
         - data exploration and descriptive analysis
         - model diagnostics
-        - data visualization.
+        - data visualization
         
         
         ## Details about the package structure and classes
         
-        To see the documentation about classes and how to instantiate them, import the modules run the following code:
+        To see the documentation about classes and how to instantiate them, import the modules and run the following code:
         
         ```
+        from modelling_tool.data.generate import generate, buckets_data
+        from modelling_tool.preprocessing.featureEngineering import featureEngineering as fe
+        
+        from modelling_tool.exploration.descriptiveStatistics import descriptiveStatistics as ds
+        from modelling_tool.exploration.visualization import visualization as vis
+        
+        from modelling_tool.model_diagnostics.modelDiagnostics import modelDiagnostics as md
+        
+        
         help(md)
         
         print(generate.__doc__)
@@ -73,16 +82,18 @@ Description: # Modelling tool
                            test_summary = test_summary_example)
         
         ```
+        Visualization example (buckets_vis output):
+        <img src="/modelling_tool/data/vis_example2.png" />
         
         ## More details on package functionality
         If you want to see more examples, open and run the examples.py (located in modelling-tool folder).
         
         ## Package installation
-        Download .whl file and run pip install 'C:/...your_path.../modelling_tool-0.0.16-py3-none-any.whl'
+        Download .whl file from dist folder and run pip install 'C:/...your_path.../modelling_tool-0.0.16-py3-none-any.whl'
         
         ## Status
         Package development is in progress.
-        The key classes have been built and more functionality will be added over time.
+        The key blocks have been built and more functionality will be added over time.
         
         ## Contact
         Created by Erin Balabukha

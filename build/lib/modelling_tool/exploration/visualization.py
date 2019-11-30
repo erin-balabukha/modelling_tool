@@ -13,6 +13,7 @@ class styling(object):
     color_light_green = "#35B233"
     color_pale_green = "#93DF91"
     color_light_gray = '#D3D3D3'
+    color_maroon = '#800000'
     color_gray = '#808080'
     selected_font_size = 10
 
@@ -231,8 +232,8 @@ class visualization(styling):
         ax = fig.add_subplot(111)
 
         ax.plot(train_summary['bucket'].astype(str), train_summary[performance_indicator], color = self.color_dark_green, zorder=2, label = "Train")
-        ax.plot(valid_summary['bucket'].astype(str), valid_summary[performance_indicator], color = self.color_light_green, zorder=2, label = "Validation")
-        ax.plot(test_summary['bucket'].astype(str), test_summary[performance_indicator], color = self.color_gray, zorder=2, label = "Test")
+        ax.plot(valid_summary['bucket'].astype(str), valid_summary[performance_indicator], color = self.color_gray, zorder=2, label = "Validation")
+        ax.plot(test_summary['bucket'].astype(str), test_summary[performance_indicator], color = self.color_maroon, zorder=2, label = "Test")
 
         #STYLING AND FORMATTING
         # Default names for axes labels are variables names.
