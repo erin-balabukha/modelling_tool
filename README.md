@@ -75,8 +75,7 @@ my_vis.buckets_vis(train_summary = train_summary_example,
 
 ```
 
-<img src="/modelling_tool/data/vis_example.png" alt="vis_example"
-	title="buckets_vis output (model performance by bucket)" width="150" height="100" />
+<img src="/modelling_tool/data/vis_example.png" />
 
 ## More details on package functionality
 If you want to see more examples, open and run the examples.py (located in modelling-tool folder).
