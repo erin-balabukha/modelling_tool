@@ -12,6 +12,15 @@ The tool is designed to provide helper functions for a modelling project and cov
 To see the documentation about classes and how to instantiate them, import the modules and run the following code:
 
 ```
+from modelling_tool.data.generate import generate, buckets_data
+from modelling_tool.preprocessing.featureEngineering import featureEngineering as fe
+
+from modelling_tool.exploration.descriptiveStatistics import descriptiveStatistics as ds
+from modelling_tool.exploration.visualization import visualization as vis
+
+from modelling_tool.model_diagnostics.modelDiagnostics import modelDiagnostics as md
+
+
 help(md)
 
 print(generate.__doc__)
@@ -65,6 +74,9 @@ my_vis.buckets_vis(train_summary = train_summary_example,
                    test_summary = test_summary_example)
 
 ```
+
+<img src="/modelling_tool/data/vis_example.png" alt="vis_example"
+	title="buckets_vis output (model performance by bucket)" width="150" height="100" />
 
 ## More details on package functionality
 If you want to see more examples, open and run the examples.py (located in modelling-tool folder).
