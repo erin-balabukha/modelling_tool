@@ -36,21 +36,6 @@ class featureEngineering:
 
         return new_var
 
-# =============================================================================
+# TODO 
 # Methods to add:
-#       - select variables with the number of levels between range, more than...
-#       - table with proportion of missing values ranked from max missing to least
-#
-# =============================================================================
-
-# change_var_f <- function(df, x) {
-#   x_new <- paste0(x, "_Change")
-#   x_end <- paste0(x, "_Last_Mod")
-#   df[x_new] <-  ifelse(df[["n_mod_by_pol"]] == 0, 0,
-#                                   ifelse(df[[x]] == df[[x_end]], 0, 1))
-#   return(df)
-# }
-# for (i in last.mod.vars[-(1:3)]) {
-#   policies <- change_var_f(policies, i)
-#   print(names(policies[length(policies)]))
-# }
+#       - calculate proportion of missing values ranked from max missing to the least missing
